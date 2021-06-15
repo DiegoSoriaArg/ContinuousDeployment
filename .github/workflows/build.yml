@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: spalacios/landing-page:${{ github.sha }}
+          tags: spalacios/landing-page:${{ github.sha }},spalacios/landing-page:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
